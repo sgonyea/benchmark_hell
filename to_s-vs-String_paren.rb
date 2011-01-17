@@ -4,15 +4,15 @@ iters = 1000
 
 puts 'Integer(num) vs. num.to_i'
 Benchmark.bmbm do |x|
-  x.report('.to_i') do
+  x.report('.to_s') do
     iters.times.each do
-      "300".to_i
+      iters.to_s
     end
   end
 
-  x.report('Integer') do
+  x.report('String#()') do
     iters.times.each do
-      Integer "300"
+      String(iters)
     end
   end
 end
