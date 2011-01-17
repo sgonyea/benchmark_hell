@@ -1,6 +1,6 @@
 require 'benchmark'
 
-iters = 1000
+iters = 10000
 
 def do_block1
   var = "hello"

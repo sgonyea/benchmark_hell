@@ -1,6 +1,6 @@
 require 'benchmark'
 
-iters = 100
+iters = 1000
 hash  = {
   'some_key' => 'some_val'
 }
