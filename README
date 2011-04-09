@@ -1,0 +1,13 @@
+Array/grep_vs_include?.rb
+Blocks/implicit_block-vs-explicit_block.rb
+Blocks/yield_if-vs-block_given_amp_amp.rb
+Hash/has_key-vs-hash[key].rb
+Integer/integer-vs-to_i.rb
+Misc/gc-symbol_vs_string.rb
+Misc/is_a?-vs-threequals.rb
+Misc/lambdas_vs_class.rb
+Misc/loop_vs_while.rb
+String/downcase-eq-eq_vs_casecmp.rb
+String/string_appender.rb
+String/string_ranged_index.rb
+String/to_s-vs-String_paren.rb
