@@ -1,6 +1,6 @@
 require 'benchmark'
 
-iters = 1000
+iters = 100_000
 
 string = "OMG A STRING"
 
