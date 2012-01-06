@@ -51,17 +51,17 @@ end
 # me@s:~/workspace/benchmark_hell$ ruby Enumerable/reduce-vs-each_with_object-vs-map+select-vs-each_append_to_array.rb
 # reduce vs. each_with_object vs. map + select vs. each { << to array }
 # Rehearsal --------------------------------------------------------
-# reduce                 0.420000   0.000000   0.420000 (  0.417908)
-# each_with_object       0.400000   0.000000   0.400000 (  0.398760)
-# map + select           0.410000   0.000000   0.410000 (  0.416358)
-# each { << to array }   0.340000   0.010000   0.350000 (  0.339116)
-# ----------------------------------------------- total: 1.580000sec
-#
+# reduce                 0.400000   0.000000   0.400000 (  0.394418)
+# each_with_object       0.380000   0.000000   0.380000 (  0.385646)
+# map + select           0.400000   0.000000   0.400000 (  0.396079)
+# each { << to array }   0.330000   0.000000   0.330000 (  0.336147)
+# ----------------------------------------------- total: 1.510000sec
+# 
 #                            user     system      total        real
-# reduce                 0.400000   0.000000   0.400000 (  0.398515)
-# each_with_object       0.380000   0.000000   0.380000 (  0.384148)
-# map + select           0.420000   0.000000   0.420000 (  0.418823)
-# each { << to array }   0.350000   0.000000   0.350000 (  0.354707)
+# reduce                 0.390000   0.000000   0.390000 (  0.392355)
+# each_with_object       0.380000   0.000000   0.380000 (  0.383008)
+# map + select           0.400000   0.000000   0.400000 (  0.397857)
+# each { << to array }   0.330000   0.010000   0.340000 (  0.333895)
 # me@s:~/workspace/benchmark_hell$ rvm use rbx
 # Using /Users/me/.rvm/gems/rbx-head
 # me@s:~/workspace/benchmark_hell$ ruby Enumerable/reduce-vs-each_with_object-vs-map+select-vs-each_append_to_array.rb
