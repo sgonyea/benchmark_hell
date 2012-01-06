@@ -19,13 +19,13 @@ Benchmark.bmbm do |x|
   end
 
   x.report('stmt(val) if val (true e)') do
-    iters.times.each do
+    iters.times do
       stmt(true_val) if true_val
     end
   end
 
   x.report('val && stmt(val) (true e)') do
-    iters.times.each do
+    iters.times do
       true_val && stmt(true_val)
     end
   end

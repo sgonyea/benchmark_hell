@@ -17,7 +17,7 @@ end
 puts 'explicit block vs implicit'
 Benchmark.bmbm do |x|
   x.report('explicit') do
-    iters.times.each do
+    iters.times do
       do_explicit {|var|
         var << "goodbye"
       }
@@ -25,7 +25,7 @@ Benchmark.bmbm do |x|
   end
 
   x.report('implicit') do
-    iters.times.each do
+    iters.times do
       do_implicit {|var|
         var << "goodbye"
       }

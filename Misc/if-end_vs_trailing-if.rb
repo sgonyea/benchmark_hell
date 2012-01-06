@@ -7,7 +7,7 @@ string = "OMG A STRING"
 puts 'if-end vs. trailing-if'
 Benchmark.bmbm do |x|
   x.report('if-end') do
-    iters.times.each do
+    iters.times do
       if string.respond_to?(:to_s)
         string
       end
@@ -15,7 +15,7 @@ Benchmark.bmbm do |x|
   end
 
   x.report('trailing') do
-    iters.times.each do
+    iters.times do
       string if string.respond_to?(:to_s)
     end
   end

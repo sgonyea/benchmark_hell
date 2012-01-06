@@ -21,13 +21,13 @@ array = count.times.map {
 puts 'include? vs. grep, fight!'
 Benchmark.bmbm do |x|
   x.report('grep') do
-    iters.times.each do
+    iters.times do
       array.grep num
     end
   end
 
   x.report('include?') do
-    iters.times.each do
+    iters.times do
       array.include? num
     end
   end

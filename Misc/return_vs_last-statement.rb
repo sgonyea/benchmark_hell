@@ -15,13 +15,13 @@ end
 puts 'return vs. last-statement'
 Benchmark.bmbm do |x|
   x.report('return') do
-    iters.times.each do
+    iters.times do
       do_return
     end
   end
 
   x.report('last-stmt') do
-    iters.times.each do
+    iters.times do
       last_statement
     end
   end

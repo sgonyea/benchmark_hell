@@ -10,19 +10,19 @@ hello = "HelLo"
 puts 'String#downcase == vs. String#casecmp'
 Benchmark.bmbm do |x|
   x.report('String#downcase1') do
-    iters.times.each do
+    iters.times do
       hello.downcase == comp
     end
   end
 
   x.report('String#downcase2') do
-    iters.times.each do
+    iters.times do
       "HelLo".downcase == "hello"
     end
   end
 
   x.report('String#downcase3') do
-    iters.times.each do
+    iters.times do
       var = "HelLo"
       var.downcase!
       var == "hello"
@@ -30,25 +30,25 @@ Benchmark.bmbm do |x|
   end
 
   x.report('casecmp1') do
-    iters.times.each do
+    iters.times do
       hello.casecmp(comp).zero?
     end
   end
 
   x.report('casecmp1-1') do
-    iters.times.each do
+    iters.times do
       hello.casecmp(comp) == 0
     end
   end
 
   x.report('casecmp2') do
-    iters.times.each do
+    iters.times do
       "HelLo".casecmp(comp).zero?
     end
   end
 
   x.report('casecmp2-1') do
-    iters.times.each do
+    iters.times do
       "HelLo".casecmp(comp) == 0
     end
   end

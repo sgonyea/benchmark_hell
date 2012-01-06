@@ -8,13 +8,13 @@ string2 = "OMG ANOTHER STRING"
 puts 'appending vs interpolation'
 Benchmark.bmbm do |x|
   x.report('appending') do
-    iters.times.each do
+    iters.times do
       '<' << string1 << ',' << string2 << '>'
     end
   end
 
   x.report('interpolation') do
-    iters.times.each do
+    iters.times do
       "<#{string1},#{string2}>"
     end
   end

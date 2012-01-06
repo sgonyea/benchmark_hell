@@ -5,25 +5,25 @@ iters = 100000
 puts 'Fixnum#divmod vs. Fixnum#fdiv'
 Benchmark.bmbm do |x|
   x.report('#divmod') do
-    iters.times.each do
+    iters.times do
       1302390897057612.divmod(1000000)
     end
   end
 
   x.report('#fdiv') do
-    iters.times.each do
+    iters.times do
       1302390897057612.fdiv(1000000)
     end
   end
 
   x.report('Time at #divmod') do
-    iters.times.each do
+    iters.times do
       Time.at(*1302390897057612.divmod(1000000))
     end
   end
 
   x.report('Time at #fdiv') do
-    iters.times.each do
+    iters.times do
       Time.at(1302390897057612.fdiv(1000000))
     end
   end
