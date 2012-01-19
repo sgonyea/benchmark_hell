@@ -3,7 +3,7 @@ require 'benchmark'
 nums  = (1..20).to_a
 iters = 100_000
 
-puts 'reduce vs. each_with_object vs. map + select vs. each { << to array }'
+puts 'reduce vs. each_with_object vs. map + select! vs. each { << to array }'
 Benchmark.bmbm do |x|
   x.report('reduce') do
     iters.times {
@@ -24,7 +24,7 @@ Benchmark.bmbm do |x|
     }
   end
 
-  x.report('map + select') do
+  x.report('map + select!') do
     iters.times {
       squared = nums.map do |num|
         num ** 2
@@ -49,7 +49,7 @@ end
 # me@s:~/workspace/benchmark_hell$ rvm use 1.9.2
 # Using /Users/me/.rvm/gems/ruby-1.9.2-p290
 # me@s:~/workspace/benchmark_hell$ ruby Enumerable/reduce-vs-each_with_object-vs-map+select-vs-each_append_to_array.rb
-# reduce vs. each_with_object vs. map + select vs. each { << to array }
+# reduce vs. each_with_object vs. map + select! vs. each { << to array }
 # Rehearsal --------------------------------------------------------
 # reduce                 0.400000   0.000000   0.400000 (  0.394418)
 # each_with_object       0.380000   0.000000   0.380000 (  0.385646)
@@ -65,7 +65,7 @@ end
 # me@s:~/workspace/benchmark_hell$ rvm use rbx
 # Using /Users/me/.rvm/gems/rbx-head
 # me@s:~/workspace/benchmark_hell$ ruby Enumerable/reduce-vs-each_with_object-vs-map+select-vs-each_append_to_array.rb
-# reduce vs. each_with_object vs. map + select vs. each { << to array }
+# reduce vs. each_with_object vs. map + select! vs. each { << to array }
 # Rehearsal --------------------------------------------------------
 # reduce                 0.563397   0.001874   0.565271 (  0.489911)
 # each_with_object       0.443870   0.000287   0.444157 (  0.413253)
